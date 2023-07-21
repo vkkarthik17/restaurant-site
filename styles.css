@@ -1,0 +1,296 @@
+/* styles.css */
+body {
+    margin: 0px;
+  }
+ html{
+    scroll-behavior: smooth;
+ }
+  /* media query for grid */
+  @media (max-width: 767px) {
+    .grid-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      width: 80%;
+      height: auto;
+      margin: 0 auto;
+    }
+  
+    .items {
+      grid-column: unset;
+      grid-row: unset;
+      margin-bottom: 10px;
+    }
+  }
+  
+  
+  
+  /* Header */
+  .logo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    border: 2px solid rgb(211, 90, 90);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+     /* Set the color to a lighter shade that contrasts with the carousel images */
+  }
+  
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus {
+    color: rgb(239, 37, 37); /* Set a different color for hover and focus states if desired */
+  }
+  .logo-wrap .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  
+  .logo-wrap .navbar-text {
+    font-size: 14px;
+    color: #eb7878;
+    margin: 2px 0 0; 
+    padding-top: 0px;
+  }
+  
+  .navigation-items {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between; 
+  }
+ .navbar{
+    padding-top: 2rem;
+ }
+  .nav-item {
+    padding: 0 50px;
+  }
+  header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 9999;
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+  }
+
+  .navbar-brand {
+    margin-right: 5px;
+  }
+
+  .navbar-text {
+    margin-bottom: 0;
+  }
+/* carousal section */
+  .carousel {
+    margin-top: 0px; 
+    position: relative;
+  }
+  .carousel-caption{
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .carousel-item img {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    
+  }
+  /* Slow Zoom-In Animation */
+@keyframes slow-zoom-in {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    animation: slow-zoom-in 10s infinite;
+  }
+  
+  .carousel-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  .about-container{
+    text-align: center;
+    justify-content: center;
+    height: 400px;
+    background-color: rgb(255, 252, 252);
+  
+    
+    
+  }
+ .height{
+    padding-top: 2px;
+    
+ }
+ /* image */
+ .img-size{
+    width: 30%;
+    border-radius: 30px;
+    height: 65%;
+ }
+ /* image hover effect */
+ .image-container {
+    overflow: hidden;
+    height: 300px;
+  }
+  
+  .image-container img {
+    transition: transform 0.3s;
+  }
+  
+  .image-container img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* section3  menu*/
+  .grid-wrapper{
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.5fr;
+    grid-template-rows: 0.6fr 0.6fr 0.8fr;
+    background-color: rgb(242, 236, 238);
+    height: 600px;
+    width: 60%;
+    grid-gap: 10px;
+
+    
+}
+
+.items{
+    
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    
+    
+}
+.item1{
+    grid-row: 1/span 2;
+    background-image: url(images/service1.jpg);
+    
+    
+}
+.item2{
+    grid-row: 1/span 2;
+    background-image: url(images/service\ 2.jpg);
+}
+.item3{
+  background-image: url(images/bg5-transformed.jpeg);
+}
+.item4{
+  background-image: url(images/bg4.jpg);
+}
+.item5{
+    grid-column:span 2;
+    background-image: url(images/service\ 3.jpg);
+}
+.item6{
+  background-image: url(images/bg2.jpg);
+  justify-items: center;
+}
+#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFF4F4;
+}
+.menu-img{
+  background-image: url(images/service1.jpg);
+}
+/* menu image hover */
+/* ... Your existing CSS code ... */
+
+/* ... Your existing CSS code ... */
+
+.items {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.items::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.items:hover::before {
+  opacity: 1;
+}
+
+.items:hover {
+  transform: scale(1.05);
+}
+
+/* ... button  ... */
+/* ... Your existing CSS code ... */
+
+.items {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  pointer-events: none; /* Ensures that the button does not interfere with hover state */
+}
+
+.item-button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* ... Remaining CSS code ... */
+
+
+
+
